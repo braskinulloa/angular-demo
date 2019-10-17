@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-demo';
-  person: {
-    name: string,
-    lastName: string
-  }
-  status: boolean;
   constructor(){
-    console.log('caontructor.....');
-    this.getUserStatus;
-  }
-  getUserStatus(){
-    this.status = this.person?true:false;
-  }
-  getPersonFullName(){
-    return this.person?this.person.name + ' ' + this.person.lastName:'(no name defined)';;
+    console.log('contructor.....');
   }
 }
