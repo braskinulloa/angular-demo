@@ -7,12 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-demo';
-  name = 'Braskin Ulloa';
+  person: {
+    name: string,
+    lastName: string
+  }
   status: boolean;
   constructor(){
     console.log('caontructor.....');
+    this.getUserStatus;
   }
   getUserStatus(){
-    this.status = false;
+    this.status = this.person?true:false;
+  }
+  getPersonFullName(){
+    return this.person?this.person.name + ' ' + this.person.lastName:'(no name defined)';;
   }
 }
